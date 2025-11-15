@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://protfolio-fe.vercel.app/",
+    origin: "https://protfolio-fe.vercel.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
@@ -21,6 +21,11 @@ app.use(express.json());
 connectDB();
 
 // Routes Example
+app.use("/", 
+    (req, res) => {
+        res.send("API is running...");
+    }   
+);
 
 app.use("/api/contact", require("./routes/contact.routes"));
 
