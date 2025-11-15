@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://protfolio-fe.vercel.app/",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
